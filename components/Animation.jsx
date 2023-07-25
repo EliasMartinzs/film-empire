@@ -1,5 +1,6 @@
 import { searchByGenre } from '@/utils';
 import SwiperProvider from './SwiperProvider';
+import Link from 'next/link';
 
 export default async function Animation() {
   const animation = await searchByGenre(16);
@@ -7,7 +8,9 @@ export default async function Animation() {
 
   return (
     <div className="padding-web w-full">
-      <h3 className="mt-5 paragraph">Animation</h3>
+      <Link href="/genders/16" className="mt-5 paragraph">
+        Animation
+      </Link>
       <SwiperProvider>{results}</SwiperProvider>
     </div>
   );
