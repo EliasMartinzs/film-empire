@@ -18,25 +18,37 @@ export default function SwiperProvider({ children }) {
         breakpoints={{
           320: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 2,
           },
           1024: {
-            slidesPerView: 6,
-            spaceBetween: 10,
+            slidesPerView: 7,
+            spaceBetween: 5,
           },
         }}
         loop
         autoplay
         className="h-96 lg:h-[20rem] w-full"
       >
-        {Array.isArray(children)
-          ? children.map(movie => (
-              <SwiperSlide>
-                <Slides movie={movie} key={movie.title || movie.id} />
-              </SwiperSlide>
-            ))
-          : null}
+        {Array.isArray(children) ? (
+          <>
+            {children
+              .filter((_, idx) => idx < 10)
+              .map(movie => (
+                <SwiperSlide key={movie.title && movie.id} className="bg-black">
+                  <Slides movie={movie} />
+                </SwiperSlide>
+              ))}
+          </>
+        ) : null}
       </Swiper>
     </div>
   );
 }
+
+// {Array.isArray(children)
+//   ? children.map(movie => (
+// <SwiperSlide key={movie.title && movie.id} className="bg-black">
+//   <Slides movie={movie} />
+// </SwiperSlide>
+//     ))
+//   : null}

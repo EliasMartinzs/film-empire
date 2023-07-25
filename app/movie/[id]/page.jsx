@@ -1,3 +1,4 @@
+import SwiperGallery from '@/components/SwiperGallery';
 import { fetchMoviesGetImages, searchById } from '@/utils';
 import Image from 'next/image';
 
@@ -19,8 +20,6 @@ export default async function page({ params }) {
 
   const getImages = await fetchMoviesGetImages(imdb_id);
   const { images } = getImages;
-
-  console.log(images);
 
   const minutesToDate = numbers => {
     const hours = Math.floor(numbers / 60);
@@ -81,6 +80,9 @@ export default async function page({ params }) {
               : null}
           </div>
         </div>
+      </div>
+      <div className="w-full py-10 padding-web">
+        <SwiperGallery images={images} />
       </div>
     </div>
   );

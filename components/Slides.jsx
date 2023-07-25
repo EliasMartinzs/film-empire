@@ -5,15 +5,17 @@ export default function Slides({ movie }) {
   const { poster_path, id, original_title } = movie;
 
   return (
-    <div className="padding-web flex flex-col">
-      <Link href={`/movie/${id}`}>
+    <Link href={`/movie/${id}`}>
+      <div className="relative w-full h-full">
         <Image
           src={poster_path}
           alt={original_title}
           fill
-          className="object-cover object-center saturate-150 hover:scale-90"
+          className="object-cover saturate-150"
+          sizes="(max-width: 430px) 33vw, (max-width: 1200px) 33vw, 33vw"
+          loading="lazy"
         />
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
