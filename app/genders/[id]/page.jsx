@@ -1,5 +1,6 @@
 import { searchByGenre } from '@/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function Genders({ params }) {
   const { id } = params;
@@ -12,12 +13,14 @@ export default async function Genders({ params }) {
         <div className="w-full grid grid-cols-2 lg:grid-cols-5 gap-4">
           {results.map(mov => (
             <div className="h-96 lg:h-[20rem] w-full relative">
-              <Image
-                src={mov.poster_path}
-                fill
-                alt={mov.title}
-                className="object-cover object-center hover:border hover:scale-105"
-              />
+              <Link href={`/movie/${id}`}>
+                <Image
+                  src={mov.poster_path}
+                  fill
+                  alt={mov.title}
+                  className="object-cover object-center hover:border hover:scale-105"
+                />
+              </Link>
             </div>
           ))}
         </div>

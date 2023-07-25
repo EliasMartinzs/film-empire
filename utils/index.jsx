@@ -46,20 +46,20 @@ export const searchById = async id => {
   return searchById;
 };
 
-export const fetchMoviesGetImages = async id => {
-  const res = await fetch(
-    `https://online-movie-database.p.rapidapi.com/title/get-images?tconst=${id}&limit=25`,
-    {
-      headers: headersMovies,
-    }
-  );
+// export const fetchMoviesGetImages = async id => {
+//   const res = await fetch(
+//     `https://online-movie-database.p.rapidapi.com/title/get-images?tconst=${id}&limit=25`,
+//     {
+//       headers: headersMovies,
+//     }
+//   );
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data');
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error('Failed to fetch data');
+//   }
 
-  const getImages = await res.json();
+//   const getImages = await res.json();
 
-  return getImages;
-};
+//   return getImages;
+// };

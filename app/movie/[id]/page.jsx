@@ -18,8 +18,8 @@ export default async function page({ params }) {
     production_companies,
   } = movies;
 
-  const getImages = await fetchMoviesGetImages(imdb_id);
-  const { images } = getImages;
+  // const getImages = await fetchMoviesGetImages(imdb_id);
+  // const { images } = getImages;
 
   const minutesToDate = numbers => {
     const hours = Math.floor(numbers / 60);
@@ -81,9 +81,9 @@ export default async function page({ params }) {
           </div>
         </div>
       </div>
-      <div className="w-full py-10 padding-web">
+      {/* <div className="w-full py-10 padding-web">
         <SwiperGallery images={images} />
-      </div>
+      </div> */}
     </div>
   );
 }
