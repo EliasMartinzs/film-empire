@@ -57,6 +57,39 @@ export const fetchForAction = async () => {
   return fetchForAction;
 };
 
+export const fetchForAnimation = async () => {
+  const res = await fetch(
+    `https://advanced-movie-search.p.rapidapi.com/discover/movie?with_genres=16`,
+    { headers: headers }
+  );
+
+  const fetchForAnimation = await res.json();
+
+  return fetchForAnimation;
+};
+
+export const fetchForCrime = async () => {
+  const res = await fetch(
+    `https://advanced-movie-search.p.rapidapi.com/discover/movie?with_genres=80`,
+    { headers: headers }
+  );
+
+  const fetchForCrime = await res.json();
+
+  return fetchForCrime;
+};
+
+export const fetchForHorror = async () => {
+  const res = await fetch(
+    `https://advanced-movie-search.p.rapidapi.com/discover/movie?with_genres=27`,
+    { headers: headers }
+  );
+
+  const fetchForHorror = await res.json();
+
+  return fetchForHorror;
+};
+
 // export const fetchMoviesGetImages = async id => {
 //   const res = await fetch(
 //     `https://online-movie-database.p.rapidapi.com/title/get-images?tconst=${id}&limit=25`,

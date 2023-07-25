@@ -1,9 +1,9 @@
-import { searchByGenre } from '@/utils';
+import { fetchForCrime } from '@/utils';
 import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
 
 export default async function Crime() {
-  const action = await searchByGenre(80);
+  const action = await fetchForCrime();
   const { results } = action;
 
   return (

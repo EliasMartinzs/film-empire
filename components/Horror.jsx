@@ -1,9 +1,9 @@
-import { searchByGenre } from '@/utils';
+import { fetchForHorror } from '@/utils';
 import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
 
 export default async function Horror() {
-  const horror = await searchByGenre(27);
+  const horror = await fetchForHorror();
   const { results } = horror;
 
   return (

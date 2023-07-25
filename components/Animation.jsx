@@ -1,9 +1,9 @@
-import { searchByGenre } from '@/utils';
+import { fetchForAnimation } from '@/utils';
 import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
 
 export default async function Animation() {
-  const animation = await searchByGenre(16);
+  const animation = await fetchForAnimation();
   const { results } = animation;
 
   return (
