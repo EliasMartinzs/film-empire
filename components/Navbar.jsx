@@ -14,7 +14,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
 
         {isOpen ? (
           <AiOutlineClose
-            className="title cursor-pointer"
+            className="title cursor-pointer "
             onClick={() => setIsOpen(!isOpen)}
           />
         ) : (

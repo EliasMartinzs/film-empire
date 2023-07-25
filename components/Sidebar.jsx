@@ -14,14 +14,13 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       } w-56 lg:w-80 h-screen transition-all ${
         theme === 'dark' ? 'bg-[#171717]' : 'bg-[#ffffff]'
       }`}
-      onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex-start px-5 lg:px-10 flex-col">
         <div className="flex-start lg:hidden">
           <Search lgHidden="hidden" />
         </div>
         <h3 className="title font-bold mt-2">Genders</h3>
-        <ul className="mt-2 w-full">
+        <ul className="mt-2 w-full" onClick={() => setIsOpen(!isOpen)}>
           {genders.map(gender => (
             <li
               key={gender.name}
