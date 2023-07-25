@@ -1,5 +1,6 @@
 const headers = {
-  'X-RapidAPI-Key': '8a8d043963msh152aea318653135p1a3358jsn22ae21d518db',
+  // 'X-RapidAPI-Key': '8a8d043963msh152aea318653135p1a3358jsn22ae21d518db',
+  'X-RapidAPI-Key': '2136fcec17msh4741451f13987b6p10a676jsn59268c188b8d',
   'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com',
 };
 
