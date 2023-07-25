@@ -7,8 +7,8 @@ export default async function Animation() {
   const { results } = animation;
 
   return (
-    <div className="padding-web w-full">
-      <Link href="/genders/16" className="mt-5 paragraph">
+    <div className="padding-web w-full my-10">
+      <Link href="/genders/16" className="paragraph">
         Animation
       </Link>
       <SwiperProvider>{results}</SwiperProvider>

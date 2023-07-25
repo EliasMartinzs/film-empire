@@ -46,6 +46,17 @@ export const searchById = async id => {
   return searchById;
 };
 
+export const fetchForAction = async () => {
+  const res = await fetch(
+    `https://advanced-movie-search.p.rapidapi.com/discover/movie?with_genres=28`,
+    { headers: headers }
+  );
+
+  const fetchForAction = await res.json();
+
+  return fetchForAction;
+};
+
 // export const fetchMoviesGetImages = async id => {
 //   const res = await fetch(
 //     `https://online-movie-database.p.rapidapi.com/title/get-images?tconst=${id}&limit=25`,

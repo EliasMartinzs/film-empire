@@ -7,8 +7,8 @@ export default async function Crime() {
   const { results } = action;
 
   return (
-    <div className="padding-web w-full">
-      <Link href="/genders/80" className="mt-5 paragraph">
+    <div className="padding-web w-full my-10">
+      <Link href="/genders/80" className="paragraph">
         Crime
       </Link>
       <SwiperProvider>{results}</SwiperProvider>

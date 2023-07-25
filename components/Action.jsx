@@ -1,14 +1,14 @@
-import { searchByGenre } from '@/utils';
+import { fetchForAction } from '@/utils';
 import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
 
 export default async function Action() {
-  const action = await searchByGenre(28);
+  const action = await fetchForAction();
   const { results } = action;
 
   return (
-    <div className="padding-web w-full">
-      <Link href="/genders/28" className="mt-5 paragraph">
+    <div className="padding-web w-full my-10">
+      <Link href="/genders/28" className="paragraph">
         Action
       </Link>
       <SwiperProvider>{results}</SwiperProvider>

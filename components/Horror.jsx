@@ -7,8 +7,8 @@ export default async function Horror() {
   const { results } = horror;
 
   return (
-    <div className="padding-web w-full mt-5">
-      <Link href="/genders/27" className="mt-5 paragraph">
+    <div className="padding-web w-full my-10">
+      <Link href="/genders/27" className="paragraph">
         Horror
       </Link>
       <SwiperProvider>{results}</SwiperProvider>
