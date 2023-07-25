@@ -22,7 +22,7 @@
 }
 
 .small {
-  @apply text-sm;
+  @apply text-xs;
 }
 
 .paragraph {
@@ -51,4 +51,8 @@
 
 .flex-between {
   @apply flex items-center justify-between;
+}
+
+.gender-hover {
+  @apply small border p-1 rounded-lg bg-white text-black hover:border hover:bg-transparent hover:text-white cursor-pointer;
 }

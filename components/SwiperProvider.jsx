@@ -27,7 +27,7 @@ export default function SwiperProvider({ children }) {
         }}
         loop
         autoplay
-        className="h-96 lg:h-[30rem] w-full"
+        className="h-96 lg:h-[20rem] w-full"
       >
         {Array.isArray(children)
           ? children.map(movie => (

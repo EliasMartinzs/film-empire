@@ -3,6 +3,11 @@ const headers = {
   'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com',
 };
 
+const headersMovies = {
+  'X-RapidAPI-Key': '82fa316542mshf6d8db6f23554a7p1cf804jsne1730c180fba',
+  'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com',
+};
+
 export const searchByName = async query => {
   const res = await fetch(
     `https://advanced-movie-search.p.rapidapi.com/search/movie?query=${
@@ -38,4 +43,22 @@ export const searchById = async id => {
   const searchById = await res.json();
 
   return searchById;
+};
+
+export const fetchMoviesGetImages = async id => {
+  const res = await fetch(
+    `https://online-movie-database.p.rapidapi.com/title/get-images?tconst=${id}&limit=25`,
+    {
+      headers: headersMovies,
+    }
+  );
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data');
+  }
+
+  const getImages = await res.json();
+
+  return getImages;
 };

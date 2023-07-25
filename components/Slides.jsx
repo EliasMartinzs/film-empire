@@ -6,12 +6,12 @@ export default function Slides({ movie }) {
 
   return (
     <div className="padding-web flex flex-col">
-      <Link href={`/movie/${id}`} className="w-full h-[20rem]">
+      <Link href={`/movie/${id}`}>
         <Image
           src={poster_path}
           alt={original_title}
           fill
-          className="object-contain object-center saturate-150"
+          className="object-cover object-center saturate-150 hover:scale-90"
         />
       </Link>
     </div>

@@ -1,5 +1,6 @@
 import { searchByGenre } from '@/utils';
 import SwiperProvider from './SwiperProvider';
+import Link from 'next/link';
 
 export default async function Action() {
   const action = await searchByGenre(28);
@@ -7,7 +8,9 @@ export default async function Action() {
 
   return (
     <div className="padding-web w-full">
-      <h3 className="mt-5 title">Action</h3>
+      <Link href="/genders/28" className="mt-5 paragraph">
+        Action
+      </Link>
       <SwiperProvider>{results}</SwiperProvider>
     </div>
   );

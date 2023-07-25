@@ -7,7 +7,7 @@ export default async function Animation() {
 
   return (
     <div className="padding-web w-full">
-      <h3 className="mt-5 title">Animation</h3>
+      <h3 className="mt-5 paragraph">Animation</h3>
       <SwiperProvider>{results}</SwiperProvider>
     </div>
   );

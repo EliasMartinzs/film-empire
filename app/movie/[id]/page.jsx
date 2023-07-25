@@ -1,4 +1,4 @@
-import { searchById } from '@/utils';
+import { fetchMoviesGetImages, searchById } from '@/utils';
 import Image from 'next/image';
 
 export default async function page({ params }) {
@@ -6,17 +6,21 @@ export default async function page({ params }) {
   const movies = await searchById(id);
 
   const {
-    adult,
     backdrop_path,
     genres,
     title,
     overview,
     popularity,
-    poster_path,
+    imdb_id,
     release_date,
     runtime,
     production_companies,
   } = movies;
+
+  const getImages = await fetchMoviesGetImages(imdb_id);
+  const { images } = getImages;
+
+  console.log(images);
 
   const minutesToDate = numbers => {
     const hours = Math.floor(numbers / 60);
@@ -27,7 +31,7 @@ export default async function page({ params }) {
 
   return (
     <div className="w-full">
-      <div className="w-full h-96 lg:h-[40rem] relative px-0">
+      <div className="w-full h-96 lg:h-[25rem] relative px-0">
         <Image
           src={backdrop_path}
           fill
@@ -38,9 +42,9 @@ export default async function page({ params }) {
           <div className="absolute bottom-0 left-10 mb-5 text-white">
             <h3 className="title font-bold mb-2">{title}</h3>
             <div className="flex-start gap-x-5">
-              <span className="small">{genres?.at(0)?.name}</span>
-              <span className="small">{genres?.at(1)?.name}</span>
-              <span className="small">{genres?.at(2)?.name}</span>
+              <span className="gender-hover ">{genres?.at(0)?.name}</span>
+              <span className="gender-hover ">{genres?.at(1)?.name}</span>
+              <span className="gender-hover ">{genres?.at(2)?.name}</span>
             </div>
           </div>
         </div>
