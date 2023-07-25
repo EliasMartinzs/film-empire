@@ -6,7 +6,6 @@ import { BsSearch } from 'react-icons/bs';
 
 export default function Search({ hidden, lgHidden }) {
   const [query, setQuery] = useState('');
-
   const router = useRouter();
 
   const handleSearch = e => {
@@ -25,8 +24,7 @@ export default function Search({ hidden, lgHidden }) {
       search.delete(query);
     }
 
-    const pathName = `http://localhost:3000/?${search.toString()}`;
-
+    const pathName = `${window.location.pathname}?${search.toString()}`;
     router.push(pathName);
   };
 
