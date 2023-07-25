@@ -16,16 +16,7 @@ export default function Search({ hidden, lgHidden }) {
   };
 
   const updateParams = query => {
-    const search = new URLSearchParams(window.location.search);
-
-    if (query) {
-      search.set('query', query);
-    } else {
-      search.delete(query);
-    }
-
-    const pathName = `${window.location.pathname}?${search.toString()}`;
-    router.push(pathName);
+    router.push(`/search/${query.split(' ').join('-')}`);
   };
 
   return (

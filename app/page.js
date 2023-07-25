@@ -5,9 +5,8 @@ import Horror from '@/components/Horror';
 import Poster from '@/components/Poster';
 import { searchByName } from '@/utils';
 
-export default async function Home({ searchParams }) {
-  const { query } = searchParams;
-  const searchedMovies = await searchByName(query);
+export default async function Home({}) {
+  const searchedMovies = await searchByName();
 
   return (
     <main className="pt-20">
