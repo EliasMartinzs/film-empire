@@ -13,7 +13,7 @@ export default async function Genders({ params }) {
         <div className="w-full grid grid-cols-2 lg:grid-cols-5 gap-4">
           {results.map(mov => (
             <div className="h-96 lg:h-[20rem] w-full relative">
-              <Link href={`/movie/${id}`}>
+              <Link href={`/movie/${mov.id}`}>
                 <Image
                   src={mov.poster_path}
                   fill
