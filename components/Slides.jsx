@@ -6,12 +6,12 @@ export default function Slides({ movie }) {
 
   return (
     <Link href={`/movie/${id}`}>
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full flex-start">
         <Image
           src={poster_path}
           alt={original_title}
           fill
-          className="object-cover saturate-150"
+          className="object-contain saturate-150"
           sizes="(max-width: 430px) 33vw, (max-width: 1200px) 33vw, 33vw"
           loading="lazy"
         />
