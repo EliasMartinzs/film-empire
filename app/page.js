@@ -3,10 +3,10 @@ import Animation from '@/components/Animation';
 import Crime from '@/components/Crime';
 import Horror from '@/components/Horror';
 import Poster from '@/components/Poster';
-import { searchByName } from '@/utils';
+import { fetchForHighlights } from '@/utils';
 
 export default async function Home({}) {
-  const searchedMovies = await searchByName();
+  const searchedMovies = await fetchForHighlights();
 
   return (
     <main className="pt-20">

@@ -11,9 +11,7 @@ const headersMovies = {
 
 export const searchByName = async query => {
   const res = await fetch(
-    `https://advanced-movie-search.p.rapidapi.com/search/movie?query=${
-      query || 'fast e furious'
-    }`,
+    `https://advanced-movie-search.p.rapidapi.com/search/movie?query=${query}`,
     { headers: headers }
   );
 
@@ -88,6 +86,17 @@ export const fetchForHorror = async () => {
   const fetchForHorror = await res.json();
 
   return fetchForHorror;
+};
+
+export const fetchForHighlights = async () => {
+  const res = await fetch(
+    `https://advanced-movie-search.p.rapidapi.com/search/movie?query=supernatural`,
+    { headers: headers }
+  );
+
+  const fetchForHighlights = await res.json();
+
+  return fetchForHighlights;
 };
 
 // export const fetchMoviesGetImages = async id => {
