@@ -12,9 +12,9 @@ export default async function Home({}) {
     <main className="pt-20">
       <Poster searchedMovies={searchedMovies} />
       <Horror />
-      {/* <Action />
+      <Action />
       <Crime />
-      <Animation /> */}
+      <Animation />
     </main>
   );
 }

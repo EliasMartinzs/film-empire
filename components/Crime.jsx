@@ -1,6 +1,7 @@
 import { fetchForCrime } from '@/utils';
 import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
+import CrimeSlider from './CrimeSlider';
 
 export default async function Crime() {
   const action = await fetchForCrime();
@@ -11,7 +12,7 @@ export default async function Crime() {
       <Link href="/genders/80" className="paragraph">
         Crime
       </Link>
-      <SwiperProvider>{results}</SwiperProvider>
+      <CrimeSlider>{results}</CrimeSlider>
     </div>
   );
 }

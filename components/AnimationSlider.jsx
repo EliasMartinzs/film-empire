@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Slides from './Slides';
 
-export default function SwiperProvider({ children }) {
+export default function AnimationSlider({ children }) {
   return (
     <div className="w-full h-full mt-2">
       <Swiper

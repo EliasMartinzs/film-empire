@@ -1,6 +1,6 @@
 import { fetchForAction } from '@/utils';
-import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
+import ActionSlider from './ActionSlider';
 
 export default async function Action() {
   const action = await fetchForAction();
@@ -11,7 +11,7 @@ export default async function Action() {
       <Link href="/genders/28" className="paragraph">
         Action
       </Link>
-      <SwiperProvider>{results}</SwiperProvider>
+      <ActionSlider>{results}</ActionSlider>
     </div>
   );
 }

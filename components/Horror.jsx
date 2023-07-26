@@ -1,6 +1,7 @@
 import { fetchForHorror } from '@/utils';
 import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
+import HorrorSlider from './HorrorSlider';
 
 export default async function Horror() {
   const horror = await fetchForHorror();
@@ -11,7 +12,7 @@ export default async function Horror() {
       <Link href="/genders/27" className="paragraph">
         Horror
       </Link>
-      <SwiperProvider>{results}</SwiperProvider>
+      <HorrorSlider>{results}</HorrorSlider>
     </div>
   );
 }

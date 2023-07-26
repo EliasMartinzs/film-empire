@@ -1,6 +1,6 @@
 import { fetchForAnimation } from '@/utils';
-import SwiperProvider from './SwiperProvider';
 import Link from 'next/link';
+import AnimationSlider from './AnimationSlider';
 
 export default async function Animation() {
   const animation = await fetchForAnimation();
@@ -11,7 +11,7 @@ export default async function Animation() {
       <Link href="/genders/16" className="paragraph">
         Animation
       </Link>
-      <SwiperProvider>{results}</SwiperProvider>
+      <AnimationSlider>{results}</AnimationSlider>
     </div>
   );
 }
